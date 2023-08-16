@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
-from setuptools import setup
+from setuptools import setup, find_packages
 
 packages = \
 ['client']
+
+package_dir={"":"pyln"}
 
 package_data = \
 {'': ['*']}
@@ -20,7 +22,7 @@ setup_kwargs = {
     'maintainer': 'None',
     'maintainer_email': 'None',
     'url': 'None',
-    'packages': packages,
+    'packages': find_packages(),
     'package_data': package_data,
     'install_requires': install_requires,
     'python_requires': '>=3.7,<4.0',
